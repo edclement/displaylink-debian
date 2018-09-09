@@ -157,6 +157,16 @@ then
 		message
 		exit 1
 	fi
+# Deepin
+elif [ "$lsb" == "Nitrux" ];
+then
+	if [ $codename == "nxos" ];
+	then
+		echo -e "\nPlatform requirements satisfied, proceeding ..."
+	else
+		message
+		exit 1
+	fi
 else
 	message
 	exit 1
@@ -349,6 +359,7 @@ ask_operation(){
     echo -e "* Linux Mint"
     echo -e "* Kali Linux"
     echo -e "* Deepin"
+    echo -e "* Nitrux"
     echo -e "\nOptions:\n"
     read -p "[I]nstall
 [U]ninstall
